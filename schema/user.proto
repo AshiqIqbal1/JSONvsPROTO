@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message Address {
+  string street = 1;
+  string city = 2;
+  string country = 3;
+  string zip_code = 4;
+}
+
+message Order {
+  string order_id = 1;
+  string product = 2;
+  float price = 3;
+  int32 quantity = 4;
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  int32 age = 4;
+  Address address = 5;
+  repeated Order orders = 6;
+}
+
+message UserList {
+  repeated User users = 1;
+}

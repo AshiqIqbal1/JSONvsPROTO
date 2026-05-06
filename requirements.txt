@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+protobuf
+grpcio-tools
+requests
+httpx

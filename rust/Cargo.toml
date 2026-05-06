@@ -1,0 +1,29 @@
+[package]
+name = "jsonvsproto"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server_json"
+path = "src/bin/server_json.rs"
+
+[[bin]]
+name = "server_proto"
+path = "src/bin/server_proto.rs"
+
+[[bin]]
+name = "benchmark"
+path = "src/bin/benchmark.rs"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+prost = "0.13"
+reqwest = { version = "0.12", features = ["json"] }
+bytes = "1"
+rand = "0.8"
+
+[build-dependencies]
+prost-build = "0.13"
